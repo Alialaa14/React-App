@@ -1,0 +1,9 @@
+.post {
+    perspective: 1000px;
+}
+.post img {
+    transition: all ease-in-out 1s;
+}
+.post  img:hover {
+    transform: translateZ(400px) rotateZ(15deg);
+}

@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+   
+    li >button {
+        @apply transition-all ease-in-out duration-150 hover:text-blue-300 
+    }
+    li>div {
+        @apply absolute left-0 top-[100%] opacity-0 invisible w-full h-[430px] bg-white z-[999] shadow-xl mt-[18px] transition-all ease-in-out duration-700 py-[20px] px-[20px]
+    }
+  .product-sale >div{
+    flex:0 0 25%
+  }
+  .whishlst-compare button {
+    @apply text-white transition-all ease-in-out  hover:text-black relative left-[-30px]
+  }
+  .whishlst-compare button>span {
+    @apply transition-all ease-in-out duration-300
+  }
+  .categories-in-sale ul li:before{
+    content: "";
+    position: absolute;
+    bottom:-10px;
+    left:0;
+    width:100%;
+    height: .5px;
+    background-color: rgb(206, 203, 203);
+}
+
+
+}

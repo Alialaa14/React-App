@@ -1,0 +1,9 @@
+.prod-img {
+    perspective: 1000px;
+}
+.prod-img img {
+    transition: all .7s ease-in-out;
+}
+.prod-img img:hover {
+    transform: translateZ(100px);
+}

@@ -1,0 +1,11 @@
+
+.categories-container >div {
+    perspective: 600px;
+    overflow: hidden;
+}
+.categories-container >div img {
+    transition: all ease-in-out .6s;
+}
+.categories-container >div img:hover {
+    transform: translateZ(100px)
+}
