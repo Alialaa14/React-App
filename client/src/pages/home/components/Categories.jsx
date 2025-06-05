@@ -9,8 +9,7 @@ import '../home.css'
 const Categories = () => {
     const navigate = useNavigate()
     const handleCatebtn = (e)=>{
-        const categoryType = e.target.dataset.cate
-        // ToDo with backend
+        
 
         navigate("/category")
 

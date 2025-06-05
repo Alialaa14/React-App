@@ -1,6 +1,5 @@
 import React from 'react'
 import logo from "../../../assets/logo.jpg"
-import {Link} from "react-router"
 import {FaEnvelopeOpen, FaFacebook, FaInstagram, FaLinkedin, FaLocationPin, FaPhone, FaPinterest, FaTwitter} from "react-icons/fa6"
 
 const Footer = () => {
