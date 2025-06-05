@@ -6,6 +6,7 @@ import Home from './pages/home/Home';
 const App = () => {
   return (
     <BrowserRouter>
+      <Home/>
       <Routes>
         <Route path="/sale" element={<Sale />}></Route>
         <Route path='/home' element={<Home/>}></Route>
