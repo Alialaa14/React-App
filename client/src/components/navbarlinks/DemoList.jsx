@@ -1,5 +1,5 @@
 import React from 'react'
-import { demos } from '../../../../assets/dataTest';
+import { demos } from '../../assets/dataTest';
 import { Link } from 'react-router';
 
 const DemoLinks = () => {

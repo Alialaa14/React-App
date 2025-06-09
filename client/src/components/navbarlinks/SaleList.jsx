@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
-import { categories , productsInSale } from '../../../../assets/dataTest.js';
+import { categories , productsInSale } from '../../assets/dataTest.js';
 
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
-import ProductCard from '../../../../components/ProductCard.jsx';
+import ProductCard from '../ProductCard.jsx';
+import {useNavigate}  from "react-router"
 const SaleList = () => {
   const [translateX , settranslateX] = useState(0)
-
+  const navigate = useNavigate()
   const handleRightArrow = (productsInSale)=>{
     if (translateX!==(-1*(productsInSale.length * 100 - 400))) {
       settranslateX((prev)=>prev-100)
@@ -21,13 +22,13 @@ const SaleList = () => {
   
   return (
     <div className="sale flex gap-[2%] group-hover:visible  group-hover:opacity-100 ">
-              <div className="categorie-sale basis-[15%] flex flex-col gap-4">
+              <div className="categorie-sale basis-[15%] flex flex-col gap-4 h-full overflow-y-scroll">
               {categories.map((cate) => {
                 return (
-                  <p className="capitalize relative pb-3 cursor-pointer transition-all ease-in-out duration-300 font-medium hover:text-blue-300">
-                    {cate}
+                  <button onClick={()=>navigate(`/categories/category/${cate.id}`)} className="capitalize text-left relative pb-3 cursor-pointer transition-all ease-in-out duration-300 font-medium hover:text-blue-300">
+                    {cate.categoryName}
                     <span className="absolute bottom-0 left-0 w-full h-[.5px] bg-slate-200"></span>
-                  </p>
+                  </button>
                 );
               })}
             </div>
@@ -37,7 +38,7 @@ const SaleList = () => {
                 return (
                   // To do when the link is not hover get the list from the beggining again
                   <div className={`prod-container px-3 transition-all ease-in-out duration-500`} style={{transform:`translateX(${translateX}%)`}}>
-                    <ProductCard product={prod}/>
+                    <ProductCard product={prod} height={"h-[300px]"}/>
                   </div>
                 );
               })}

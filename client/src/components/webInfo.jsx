@@ -7,13 +7,23 @@ import {
   IoMdPhoneLandscape,
 } from "react-icons/io";
 
-import ca from "../../../assets/ca.svg";
+import ca from "../assets/ca.svg";
+import {currencies} from "../assets/dataTest.js"
 
 const WebInfo = () => {
   const [languageList, showLanguageList] = useState(false);
   const [currencyList, showCurrencyList] = useState(false);
+  const [currencyValue , setCurrencyValue] = useState({image:ca , abbr:"Canda"})
   const langRef = useRef(null);
   const currencyRef = useRef(null);
+
+  const handleCurrency = (e)=>{
+      const currencyImage = e.target.dataset.img
+      const currencyAbr  = e.target.dataset.abr
+
+      setCurrencyValue({image:currencyImage , abbr:currencyAbr})
+      showCurrencyList(false)
+  }
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -121,58 +131,33 @@ const WebInfo = () => {
                 }}
                 className="flex items-center  transition-all duration-300 hover:text-blue-300 "
               >
-                <img src={ca} alt="canda" className="w-[12px] h-[12px]"></img>
-                <span className="ms-1">Currency</span>
+                <img src={currencyValue.image} alt="canda" className="w-[14px] h-[14px]"></img>
+                <span className="ms-1">{currencyValue.abbr}</span>
                 <i className="pt-1">
                   <IoIosArrowDown />
                 </i>
               </button>
 
               {currencyList && (
-                <div className="list-container absolute  bg-white shadow-xl top-[100%] right-0 z-[999] ">
-                  <div className="list py-[30px] ps-[15px] pe-[30px] pb-[30px]">
-                    <ul className="w-[120px]">
-                      <li className="flex items-center gap-1 mb-2">
-                        <img
-                          className="w-[14px] h-[14px]"
-                          src={ca}
-                          alt="canda"
-                        ></img>
-                        <button className="transition-all duration-300 hover:text-blue-300">
-                          Canada - CAD $
-                        </button>
+                <div className="list-container absolute bg-white shadow-xl min-w-[200px] max-w-[300px] top-[100%] right-0 z-[999] ">
+                  <div className="list py-[30px] ps-[15px] pb-[30px]">
+                    <ul className="">
+                        {
+                          currencies.map((curr)=>{
+                            return  <li className="flex items-center gap-1 mb-2">
+                                        <img
+                                          className="w-[14px] h-[14px]"
+                                          src={curr.image}
+                                          alt="canda"
+                                        ></img>
+                                      <button onClick={(e)=>handleCurrency(e)} data-img={curr.image} data-abr={curr.abbreviation} className="transition-all duration-300 hover:text-blue-300">
+                                        {
+                                          curr.country + " - " + curr.abbreviation + " " + curr.symbol
+                                        }
+                                      </button>
                       </li>
-
-                      <li className="flex items-center gap-1 mb-2">
-                        <img
-                          className="w-[14px] h-[14px]"
-                          src={ca}
-                          alt="canda"
-                        ></img>
-                        <button className="transition-all duration-300 hover:text-blue-300">
-                          Canada - CAD $
-                        </button>
-                      </li>
-                      <li className="flex items-center gap-1 mb-2">
-                        <img
-                          className="w-[14px] h-[14px]"
-                          src={ca}
-                          alt="canda"
-                        ></img>
-                        <button className="transition-all duration-300 hover:text-blue-300">
-                          Canada - CAD $
-                        </button>
-                      </li>
-                      <li className="flex items-center gap-1 mb-2">
-                        <img
-                          className="w-[14px] h-[14px]"
-                          src={ca}
-                          alt="canda"
-                        ></img>
-                        <button className="transition-all duration-300 hover:text-blue-300">
-                          Canada - CAD $
-                        </button>
-                      </li>
+                          })
+                        }
                     </ul>
                   </div>
                 </div>

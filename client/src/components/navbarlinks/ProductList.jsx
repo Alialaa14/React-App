@@ -1,5 +1,5 @@
 import React from 'react'
-import { product } from '../../../../assets/dataTest';
+import { product } from '../../assets/dataTest';
 import { Link } from 'react-router';
 
 const ProductList = () => {

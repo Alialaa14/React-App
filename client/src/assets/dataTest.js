@@ -111,15 +111,7 @@ export const product = {
   ],
 };
 
-export const categories = [
-    "men" , 
-    "women" , 
-    "accessories" , 
-    "watches" , 
-    "bag" , 
-    "fashion" ,
-    "shoes"
-]
+
 
 export const productsInSale = [
   {
@@ -294,4 +286,81 @@ export const blogs = [
     "description": "As AI tools like ChatGPT and Claude become more powerful, prompt engineering is emerging as a key" , 
     "img":"https://images.pexels.com/photos/6311595/pexels-photo-6311595.jpeg"
   }]
+
+export const currencies =  [
+  {
+    country: "United States",
+    abbreviation: "USD",
+    symbol: "$",
+    image: "https://flagcdn.com/us.svg"
+  },
+  {
+    country: "European Union",
+    abbreviation: "EUR",
+    symbol: "€",
+    image: "https://flagcdn.com/eu.svg"
+  },
+  {
+    country: "Japan",
+    abbreviation: "JPY",
+    symbol: "¥",
+    image: "https://flagcdn.com/jp.svg"
+  },
+  {
+    country: "United Kingdom",
+    abbreviation: "GBP",
+    symbol: "£",
+    image: "https://flagcdn.com/gb.svg"
+  },
+  {
+    country: "Australia",
+    abbreviation: "AUD",
+    symbol: "A$",
+    image: "https://flagcdn.com/au.svg"
+  },
+  {
+    country: "Canada",
+    abbreviation: "CAD",
+    symbol: "C$",
+    image: "https://flagcdn.com/ca.svg"
+  },
+  {
+    country: "Switzerland",
+    abbreviation: "CHF",
+    symbol: "CHF",
+    image: "https://flagcdn.com/ch.svg"
+  },
+  {
+    country: "China",
+    abbreviation: "CNY",
+    symbol: "¥",
+    image: "https://flagcdn.com/cn.svg"
+  },
+  {
+    country: "India",
+    abbreviation: "INR",
+    symbol: "₹",
+    image: "https://flagcdn.com/in.svg"
+  },
+  {
+    country: "Brazil",
+    abbreviation: "BRL",
+    symbol: "R$",
+    image: "https://flagcdn.com/br.svg"
+  }
+];
+
+
+export const categories = [
+  { id: 8, categoryName: "Outerwear", image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?crop=entropy&cs=tinysrgb&fit=crop&w=700&q=60" },
+  { id: 8, categoryName: "Outerwear", image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?crop=entropy&cs=tinysrgb&fit=crop&w=700&q=60" },
+  { id: 8, categoryName: "Outerwear", image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?crop=entropy&cs=tinysrgb&fit=crop&w=700&q=60" },
+  { id: 8, categoryName: "Outerwear", image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?crop=entropy&cs=tinysrgb&fit=crop&w=700&q=60" },
+  { id: 8, categoryName: "Outerwear", image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?crop=entropy&cs=tinysrgb&fit=crop&w=700&q=60" },
+  { id: 8, categoryName: "Outerwear", image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?crop=entropy&cs=tinysrgb&fit=crop&w=700&q=60" },
+  { id: 8, categoryName: "Outerwear", image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?crop=entropy&cs=tinysrgb&fit=crop&w=700&q=60" },
+  { id: 8, categoryName: "Outerwear", image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?crop=entropy&cs=tinysrgb&fit=crop&w=700&q=60" },
+  { id: 18, categoryName: "Winter Wear", image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?crop=entropy&cs=tinysrgb&fit=crop&w=700&q=60" },
+
+];
 

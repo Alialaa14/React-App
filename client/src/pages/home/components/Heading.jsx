@@ -11,7 +11,7 @@ const Heading = () => {
                 <p className='text-xl uppercase font-medium font-serif'>New Season</p>
                 <p className='capitalize text-5xl font-serif'>lookbook collection </p>
                  <button className='explore text-white relative bg-slate-800 mt-[10px] px-[20px] py-[7px] group'>
-                    <p className='relative z-[995] '><Link to={'/sale'}>Explore Now</Link></p>
+                    <p className='relative z-[995] '><Link to={'/categories'}>Explore Now</Link></p>
                     <span className='overlay block bg-blue-300 absolute bottom-0 left-0 w-full h-0 transition-all ease-in-out duration-300 group-hover:h-full '></span>
                  </button>
             </div>

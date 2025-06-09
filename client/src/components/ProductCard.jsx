@@ -7,10 +7,10 @@ import {
 import { IoIosGitCompare } from "react-icons/io";
 
 import "./ProductCard.css"
-const ProductCard = ({product}) => {
+const ProductCard = ({product , height}) => {
   return (
     <div className='product-card'>
-        <div className="prod-img mb-3 h-[300px] cursor-pointer group/img relative overflow-hidden ">
+        <div className={`prod-img mb-3  ${height}  cursor-pointer group/img relative overflow-hidden`}>
                       <img className="h-full w-full" src={product.img} alt="img" />
                       <div className="whishlst-compare absolute top-[15px] left-[10px] flex flex-col gap-3">
                         <button className="love group/button group-hover/img:left-0 duration-300  ">

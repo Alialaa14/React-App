@@ -1,8 +1,8 @@
 import React from 'react'
-import { shop } from '../../../../assets/dataTest';
+import { shop } from '../../assets/dataTest';
 import { Link } from 'react-router';
-import slide3 from "../../../../assets/slide3.jpg";
-import slide2 from "../../../../assets/slide2.jpg";
+import slide3 from "../../assets/slide3.jpg";
+import slide2 from "../../assets/slide2.jpg";
 
 const ShopList = () => {
   return (
