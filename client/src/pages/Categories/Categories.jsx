@@ -30,7 +30,7 @@ const Categories = ()=>{
 	               	{
 	               		categories.map((cate)=>{
 	               			return <div  className='cursor-pointer h-[350px] lg:h-[470px] relative col-span-6 lg:col-span-4'>
-						                    <img className='h-full w-full  ' src={cate.image} alt='category'/>
+						                    <img className='h-full w-full' src={cate.image} alt='category'/>
 						                    <button onClick={(e)=>handleCatebtn(e)} data-id={cate.id} className='w-[150px] h-[40px] absolute bg-white text-black bottom-[20px] left-[50%] translate-x-[-50%] font-medium transition-all ease-in-out duration-500 hover:bg-black hover:text-white '>{cate.categoryName}</button>
 						                </div>
 		               		})
